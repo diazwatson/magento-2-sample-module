@@ -14,7 +14,10 @@
     use Magento\Framework\View\Result\PageFactory;
     use Magento\Framework\App\Action\Context;
 
-
+    /**
+     * Class World
+     * @package Diazwatson\SampleModule\Controller\Hello
+     */
     class World extends \Magento\Framework\App\Action\Action
     {
         protected $_pageFactory;

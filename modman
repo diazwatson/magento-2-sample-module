@@ -1,2 +1,2 @@
 # modman configuration file
-src             app/code/Diazwatson/Magento2SampletModule
+src             app/code/Diazwatson/SampletModule

@@ -1,0 +1,25 @@
+<?php
+    /**
+     * Diazwatson_SampleModule
+     *
+     * @category    Diazwatson
+     * @package     Diazwatson_SampleModule
+     * @Date        01/2016
+     * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+     * @author      @diazwatson
+     */
+
+    /** * @var App\Code\Diazwatson\SampleModule\Block $this */
+    // @codingStandardsIgnoreFile
+?>
+
+<h1><?php echo __('Hello ') . $this->escapeHtml($this->getName()) ?><br/>
+    <?php echo __('This is a Sample Module with:') ?><br/>
+    - <?php echo __('A Controller') ?> <br/>
+    - <?php echo __('A Block') ?> <br/>
+    - <?php echo __('A Layout') ?><br/>
+    - <?php echo __('and Template file..') ?> :-)</h1>
+
+
+<p><?php echo $this->getMessage(); ?></p>
+<p><?php echo $this->escapeHtml($this->getMethodMessage()); ?></p>

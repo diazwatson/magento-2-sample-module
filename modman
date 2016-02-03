@@ -1,2 +1,6 @@
 # modman configuration file
-src             app/code/Diazwatson/SampletModule
+src             app/code/Diazwatson/SampleModule
+
+# Clear the cache
+@shell   php -f  $PROJECT/bin/magento cache:clean
+@shell   php -f  $PROJECT/bin/magento cache:flush

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diazwatson_SampleModule
+ *
+ * @category    Diazwatson
+ * @package     Diazwatson_SampleModule
+ * @Date        02/2016
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ */-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="custom" translate="label comment" sortOrder="1">
+            <label>Custom Tab</label>
+        </tab>
+        <section id="custom_general" translate="label comment" showInDefault="1">
+            <tab>custom</tab>
+            <label>Custom Tab</label>
+            <resource>Magento_Config::config</resource>
+            <group id="custom_group" translate="label comment" showInDefault="1" sortOrder="1">
+                <label>Custom Group</label>
+                <field id="custom_1" type="text" showInDefault="1">
+                    <label>Custom Field 1</label>
+                </field>
+                <field id="custom_2" translate="label comment" type="select" showInDefault="1" sortOrder="2">
+                    <label>Show Countries</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>This is just an example of select using the source model yesno</comment>
+                </field>
+                <field id="custom_3" translate="label comment" type="multiselect" sortOrder="3" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Country</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <comment>This is just an example of depends</comment>
+                    <depends>
+                        <field id="custom_2">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="custom_group2" translate="label comment" showInDefault="1" >
+                <label>Custom Group 2</label>
+                <field id="custom_1" translate="label comment" type="text" showInDefault="1">
+                    <label>Custom Field 1</label>
+                </field>
+                <field id="custom_2" translate="label comment" type="select" showInDefault="2">
+                    <label>Custom Field 2</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="custom_general2" translate="label comment" showInDefault="1">
+            <tab>custom</tab>
+            <label>Custom Tab2</label>
+            <resource>Magento_Config::config</resource>
+            <group id="custom_group" translate="label comment" showInDefault="1" sortOrder="1">
+                <label>Custom Group</label>
+                <field id="custom_1" type="text" showInDefault="1">
+                    <label>Custom Field 1</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
